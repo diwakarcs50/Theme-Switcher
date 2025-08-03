@@ -1,69 +1,122 @@
-# React + TypeScript + Vite
+# 🎨 React Multi-Theme Switcher App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight and elegant **React + TypeScript** application that allows users to switch between **three distinct themes**:  
+**Minimal**, **Dark**, and **Colorful** — all built using **Tailwind CSS**, powered by the **Context API**, and persisted using **localStorage**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## Expanding the ESLint configuration
+✅ **Three Dynamic Themes**  
+- 🧼 Minimal — Clean and modern look  
+- 🌑 Dark — Night-friendly interface  
+- 🌈 Colorful — Bright and vibrant  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ **Theme Persistence**  
+- Your chosen theme is remembered across sessions using `localStorage`.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+✅ **Global State Management**  
+- Implemented using **React's Context API** for clean and scalable theme control.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+✅ **Tailwind CSS**  
+- Utility-first styling with support for custom themes and layout styling.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+✅ **Responsive & Accessible**  
+- Mobile-friendly and keyboard-accessible design.
+
+---
+
+## 🛠️ Tech Stack
+
+- ⚛️ **React** with **TypeScript**
+- ⚡ **Vite** for blazing-fast development
+- 🎨 **Tailwind CSS**
+- 🧠 **Context API** for state management
+- 💾 **localStorage** for persistence
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/react-theme-switcher.git
+cd react-theme-switcher
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+# or
+yarn install
 ```
+
+### 3. Run the development server
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+The app will be running at: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🧩 Project Structure
+
+```bash
+src/
+│
+├── components/        # Reusable UI components
+├── context/           # ThemeContext implementation
+├── themes/            # Theme-related classes (optional)
+├── App.tsx            # Main App component
+├── main.tsx           # App entry point
+└── index.css          # Tailwind & global styles
+```
+
+---
+
+## 🧠 How It Works
+
+- A `ThemeContext` provides the current theme and toggle logic across the app.
+- Tailwind utility classes are dynamically applied using the selected theme.
+- On load, the theme is fetched from `localStorage` if available.
+- Theme changes are instantly reflected and saved for next visits.
+
+---
+
+## 📸 Screenshots
+
+> _Include screenshots here if you have them._
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+---
+
+## ✨ Future Enhancements
+
+- Add support for system theme detection
+- Transition animations between theme switches
+- Save theme preference per route or page
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+Made with ❤️ using React, TypeScript, and Tailwind CSS.
