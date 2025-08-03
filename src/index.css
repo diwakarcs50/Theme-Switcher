@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.theme-minimal {
+  --bgColor: #ffffff;
+  --fontColor: #333333;
+  --accent: #007AFF;
+  --secondary: #F5F5F5;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-serif: ui-serif, Georgia, serif;
+  --font-display: var(--font-sans);
+  --spacing-layout: 1rem;
+}
+
+.theme-dark {
+  --bgColor: #1a1a1a;
+  --fontColor: #ffffff;
+  --accent: #6366f1;
+  --secondary: #2d2d2d;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-serif: ui-serif, Georgia, serif;
+  --font-display: var(--font-serif);
+  --spacing-layout: 1.5rem;
+}
+
+.theme-colorful {
+  --bgColor: #f0f9ff;
+  --fontColor: #1e40af;
+  --accent: #f59e0b;
+  --secondary: #fef3c7;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-serif: ui-serif, Georgia, serif;
+  --font-display: 'Pacifico', cursive;
+  --spacing-layout: 2rem;
+}
+
+@layer base {
+  body {
+    @apply bg-bgColor text-fontColor;
+    transition: background-color 500ms ease-in-out, 
+                color 500ms ease-in-out,
+                font-family 500ms ease-in-out;
+  }
+
+  * {
+    @apply transition-colors duration-500;
+  }
+}
+
+@layer components {
+  .layout-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
