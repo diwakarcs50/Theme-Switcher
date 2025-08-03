@@ -12,6 +12,9 @@
   --font-serif: ui-serif, Georgia, serif;
   --font-display: var(--font-sans);
   --spacing-layout: 1rem;
+  --content-width: 100%;
+  --sidebar-width: 0px;
+  --grid-columns: 1;
 }
 
 .theme-dark {
@@ -23,6 +26,9 @@
   --font-serif: ui-serif, Georgia, serif;
   --font-display: var(--font-serif);
   --spacing-layout: 1.5rem;
+  --content-width: calc(100% - 250px);
+  --sidebar-width: 250px;
+  --grid-columns: 1;
 }
 
 .theme-colorful {
@@ -34,6 +40,9 @@
   --font-serif: ui-serif, Georgia, serif;
   --font-display: 'Pacifico', cursive;
   --spacing-layout: 2rem;
+  --content-width: 100%;
+  --sidebar-width: 0px;
+  --grid-columns: 3;
 }
 
 @layer base {
